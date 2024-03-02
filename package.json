@@ -1,0 +1,23 @@
+
+{                                                                                
+  "name": "be.eloistree.gameincameraviewoverlayer",                              
+  "displayName": "Game In Camera View Overlayer",                        
+  "version": "0.0.1",                         
+  "unity": "2018.1",                             
+  "unityRelease": "",                             
+  "description": "Allow to create game that are design to stay in the camera viewport only. In addition, it has a overlayer script to play the game over the screen of the user.",                         
+  "keywords": ["Script","Tool"],                       
+  "dependencies":{},     
+  "relatedPackages":{},     
+  "samples" : [],     
+  "author" : {
+"name":"",
+"mail":"",
+"url":""},     
+  "repository":{
+"type":"Git",
+"url":"https://github.com/EloiStree/2024_02_29_GameInCameraViewOverLayer.git",
+"footprint":"",
+"revision":""},     
+  "category": "Script"                   
+} 
