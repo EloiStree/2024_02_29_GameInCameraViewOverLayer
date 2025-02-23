@@ -9,7 +9,7 @@ public class KeepLockTransformInViewportMono : MonoBehaviour
     public Transform m_toAffect;
     public float m_offsetBorder = 0.05f;
     public float m_offsetNearPlane = 1;
-    public float m_offsetfarPlane = 1;
+    public float m_offsetFarPlane = 1;
     public bool m_useDebugDraw = false;
     public  void RecenterInViewportIfCenterOut()
     {
@@ -49,7 +49,7 @@ public class KeepLockTransformInViewportMono : MonoBehaviour
         }
         if (viewPort.z > m_cameraToUse.farClipPlane)
         {
-            m_toAffect.position = m_cameraToUse.transform.position + m_cameraToUse.transform.forward * (m_cameraToUse.farClipPlane - m_offsetfarPlane);      }
+            m_toAffect.position = m_cameraToUse.transform.position + m_cameraToUse.transform.forward * (m_cameraToUse.farClipPlane - m_offsetFarPlane);      }
         if (viewPort.z < m_cameraToUse.nearClipPlane)
         {
             m_toAffect.position = m_cameraToUse.transform.position + m_cameraToUse.transform.forward * (m_cameraToUse.nearClipPlane + m_offsetNearPlane);

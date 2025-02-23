@@ -18,6 +18,8 @@ public class SquareViewportInvisibileWallMono : MonoBehaviour
     public bool m_useUpdateRefresh = true;
     public bool m_refresh;
 
+
+    public float m_groundAdjustmentHeight = 0.05f;
     private void Update()
     {
         if (m_useUpdateRefresh)
@@ -94,6 +96,7 @@ public class SquareViewportInvisibileWallMono : MonoBehaviour
 
         Vector3 centerTop = m_cameraToUse.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, m_cameraToUse.farClipPlane));
         m_ground.position = centerTop;
+        m_ground.position -= m_cameraToUse.transform.forward * m_groundAdjustmentHeight;
         m_ground.rotation = m_cameraToUse.transform.rotation;
         m_ground.localScale = new Vector3( Vector3.Distance(m_start, m_right), Vector3.Distance(m_start, m_end),1);
 
